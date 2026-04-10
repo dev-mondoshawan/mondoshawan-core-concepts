@@ -1,0 +1,21 @@
+[package]
+name = "mondoshawan-core-concepts"
+version = "0.1.0"
+edition = "2021"
+description = "Core algorithmic concepts from the MondoShawan post-quantum Layer 1 blockchain"
+license = "BSL-1.1"
+repository = "https://github.com/dev-mondoshawan/mondoshawan-core-concepts"
+keywords = ["blockchain", "post-quantum", "kyber", "proof-of-work", "blake3"]
+categories = ["cryptography", "network-programming"]
+
+[dependencies]
+blake3 = "1.5"
+serde = { version = "1.0", features = ["derive"] }
+tokio = { version = "1.0", features = ["full"] }
+
+[dev-dependencies]
+tokio = { version = "1.0", features = ["full", "test-util"] }
+
+[[bin]]
+name = "mondoshawan-core-concepts"
+path = "src/main.rs"
