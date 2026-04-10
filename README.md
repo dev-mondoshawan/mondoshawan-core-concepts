@@ -1,3 +1,4 @@
+<img width="1024" height="1024" alt="mondoshawan_project_logo" src="https://github.com/user-attachments/assets/c64dc3b4-fdd7-4a74-89c2-a78ded951675" />
 # MondoShawan — Core Concepts
 
 This repository contains two standalone algorithmic modules extracted from the
