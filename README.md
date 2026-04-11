@@ -36,7 +36,7 @@ EVM RPC surface (MetaMask compatible, 129+ JSON-RPC methods).
 ### What It Does
 
 `B3MemHash` is a memory-hard hash function built on Blake3. It is used in **Stream B**
-of MondoShawan's TriStream Proof-of-Work architecture to provide ASIC resistance while
+of MondoShawan's BraidCore Proof-of-Work architecture to provide ASIC resistance while. **BraidCore** — Mondoshawan's multi-stream mining architecture where three parallel mining streams (A, B, C) cross-reference each other at the parent level, braiding into a single GhostDAG consensus layer.
 keeping mining accessible to consumer CPUs and GPUs.
 
 The memory mixing step — the inner loop bottleneck — uses automatic SIMD dispatch:
@@ -59,7 +59,7 @@ oscillation. A moving-average variant averages the last N block times for produc
 This DAA was tuned live on the testnet to eliminate oscillation at `INITIAL_DIFFICULTY_A = 20`,
 producing stable ~10-11s block times between two datacenter nodes.
 
-### TriStream Architecture
+### BraidCore Architecture
 
 ```
 Stream A (Blake3)     → ASIC-friendly, ~10s target

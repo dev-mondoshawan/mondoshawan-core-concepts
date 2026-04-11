@@ -1,9 +1,9 @@
 //! # PoW Mining Core — B3MemHash with SIMD-Accelerated Memory Mixing
 //!
 //! This module demonstrates the core cryptographic mining implementation used in
-//! the MondoShawan blockchain's TriStream Proof-of-Work architecture.
+//! the MondoShawan blockchain's BraidCore Proof-of-Work architecture.
 //!
-//! ## TriStream PoW Overview
+//! ## BraidCore PoW Overview
 //!
 //! MondoShawan uses three parallel mining streams to balance hardware accessibility
 //! and ASIC resistance:
