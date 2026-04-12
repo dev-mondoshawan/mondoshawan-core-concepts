@@ -127,6 +127,24 @@ The Kyber handshake is one layer of a defence-in-depth P2P security model:
 
 ---
 
+## Network Security Architecture
+
+The `kyber_transport.rs` module is one layer of a five-layer defense-in-depth P2P security model:
+
+| Layer | Mechanism | Purpose |
+|-------|-----------|---------|
+| Transport | QUIC + TLS 1.3 | Wire encryption |
+| Identity | Ed25519 + TOFU | Peer authentication |
+| Messages | Ed25519 signatures | Per-message auth + replay protection |
+| Network | Subnet limits + reputation scoring | Sybil/eclipse prevention |
+| Post-Quantum | ML-KEM-768 | Quantum-resistant forward secrecy |
+
+The ML-KEM-768 implementation in Module 2 provides the post-quantum layer, protecting against "harvest now, decrypt later" attacks where adversaries record encrypted traffic today for future quantum decryption.
+
+See [docs/NETWORK_SECURITY.md](docs/NETWORK_SECURITY.md) for the full specification, including the HKDF domain separation protocol, reputation scoring model, and ban system.
+
+---
+
 ## Running the Tests
 
 ```bash
