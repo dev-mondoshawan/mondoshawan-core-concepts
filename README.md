@@ -145,6 +145,19 @@ See [docs/NETWORK_SECURITY.md](docs/NETWORK_SECURITY.md) for the full specificat
 
 ---
 
+## Security
+
+We believe in honest security disclosure. Our [Threat Model and Security Analysis](docs/THREAT_MODEL.md) catalogs the known attack surface, documents mitigations, and is explicit about unresolved issues and risks that have not been externally verified.
+
+**Key points:**
+- **No external audit yet** — All findings are self-assessed
+- **Known critical issue** — StateSnapshot merge bug (not in production path, must fix before parallel execution)
+- **Responsible disclosure policy** — We welcome security researchers; see the threat model for contact details and reward commitment
+
+For the complete security architecture including P2P hardening roadmap, see the full documentation in our main repository (available under NDA).
+
+---
+
 ## Running the Tests
 
 ```bash
